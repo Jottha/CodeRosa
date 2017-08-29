@@ -1,0 +1,35 @@
+header {
+	background: #d00053; 
+	text-align: center;
+	padding: 15px;
+	font-family: 'Ubuntu Condensed', sans-serif;
+	color: #FFFFFF;
+}
+
+	header .profile-picture {
+		width: 125px;
+		height: 125px;
+		border-radius: 85px;
+	}
+
+section {
+	//background: #ECEFF1; 
+	text-align: justify;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 20px;
+	color: black
+}
+
+h1 {
+	font-size: 20px
+}
+
+footer {
+	background-color: #B0BEC5; 
+	/*position: absolute;*/
+	/*bottom: 0;*/
+    width: 100%;
+    padding: 15px;
+	text-align: center;
+}

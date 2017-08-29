@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar color="corApp">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Sign Up</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h1 text-center>
+    <ion-icon class="auth-icon" name="person-add" color="corApp"></ion-icon>
+  </h1>
+
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit(); $event.preventDefault()">
+
+    <ion-item>
+      <ion-icon name="person" item-left></ion-icon>
+      <ion-input type="text" placeholder="Nome" formControlName="nome"></ion-input>
+    </ion-item>
+
+     <ion-item>
+      <ion-icon name="paper" item-left></ion-icon>
+      <ion-input type="text" placeholder="Biografia" formControlName="biografia"></ion-input>
+    </ion-item>
+
+     <ion-item>
+      <ion-icon name="school" item-left></ion-icon>
+      <ion-input type="text" placeholder="Academico" formControlName="academico"></ion-input>
+    </ion-item>
+
+     <ion-item>
+      <ion-icon name="call" item-left></ion-icon>
+      <ion-input type="text" placeholder="Telefone" formControlName="telefone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="at" item-left></ion-icon>
+      <ion-input type="text" placeholder="Email" formControlName="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="lock" item-left></ion-icon>
+      <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+    </ion-item>
+
+    <br>
+   
+      <button ion-button full type="submit" [disabled]="signupForm.invalid">Create Account</button>
+
+  </form>
+  
+</ion-content>

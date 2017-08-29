@@ -1,0 +1,24 @@
+<ion-menu [content]="NAV">  
+
+<ion-header transparent>
+  <ion-navbar tranparent>
+    <ion-title>Menu</ion-title>
+  </ion-navbar>
+</ion-header>
+
+  <ion-content>    
+    <img class="logo" src="assets/icons/icon.png">
+    <ion-list>
+<ion-item-divider class="cor" align="center">Code Rosa App</ion-item-divider>
+    <ion-item item-start *ngFor="let page of pages" (click)="goToPage(page.component)" menuClose>
+    <ion-avatar >
+          <ion-icon align="center"item-left name="{{ page.icon }}"></ion-icon>
+        {{ page.title }}
+    </ion-avatar>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-menu>
+
+<ion-nav #NAV [root]="rootPage"></ion-nav>

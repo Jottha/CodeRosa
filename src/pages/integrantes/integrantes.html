@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="corApp">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Integrantes</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list no-lines>
+    <button ion-item *ngFor="let user of users | async" (click)="goToCurriculo(user)">
+    <ion-avatar item-start>
+      <img src="">
+    </ion-avatar>
+        {{ user.nome }}
+    </button>
+  </ion-list>  
+
+</ion-content>
+

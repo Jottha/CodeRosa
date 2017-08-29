@@ -1,0 +1,63 @@
+<ion-header>
+
+  <ion-navbar color="corApp">
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+	<ion-list no-lines>
+    <button ion-item *ngFor="let user of users | async">
+			<header>
+    <div class="user">
+      <img class="profile-picture" src="">
+			<br>
+      <h1>{{ user.nome }}</h1>
+    </div>
+  </header>
+
+	<section>
+			<div class="title">
+				<h1>Biografia</h1>
+				<div class="content">
+					<br>
+					<p>
+						 {{ user.biografia}}
+					</p>
+				</div>
+			</div>
+	</section>
+
+		<section>
+			<div class="title">
+				<h1>Acadêmico</h1>
+				<div class="content">
+					<br>
+					<p>
+						{{ user.academico}}
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="title">
+				<h1>Contato</h1>
+				<div class="content">
+					<br>
+					<p>
+						Email: {{ user.email}}
+					</p>
+					<br>
+					<p>
+						Telefone: {{ user.telefone }}
+					</p>
+				</div>
+			</div>
+		</section>
+
+    </button>
+  </ion-list> 
+</ion-content>
